@@ -1,0 +1,153 @@
+
+@use 'styles/mixins' as mx;
+@use 'styles/variables' as v;
+
+:root {
+
+/* Colors: */
+--unnamed-color-4e5555: #4E5555;
+--unnamed-color-e23161: #E23161;
+--unnamed-color-ffffff: #FFFFFF;
+--unnamed-color-06d6a2: #06D6A2;
+--unnamed-color-401a9b: #401A9B;
+--unnamed-color-484f55: #484F55;
+--unnamed-color-4c5a5a: #4C5A5A;
+--unnamed-color-db3766: #DB3766;
+--unnamed-color-06d7a5: #06D7A5;
+--unnamed-color-b7bfc0: #B7BFC0;
+
+/* Font/text values */
+--unnamed-font-family-roboto: Roboto;
+--unnamed-font-family-poppins: Poppins;
+--unnamed-font-style-normal: normal;
+--unnamed-font-weight-bold: bold;
+--unnamed-font-weight-normal: normal;
+--unnamed-font-weight-medium: medium;
+--unnamed-font-size-18: 18px;
+--unnamed-font-size-22: 22px;
+--unnamed-font-size-24: 24px;
+--unnamed-font-size-28: 28px;
+--unnamed-font-size-42: 42px;
+--unnamed-character-spacing-0: 0px;
+--unnamed-character-spacing-0-73: 0.73px;
+--unnamed-line-spacing-24: 24px;
+--unnamed-line-spacing-29: 29px;
+--unnamed-line-spacing-32: 32px;
+--unnamed-line-spacing-37: 37px;
+--unnamed-line-spacing-63: 63px;
+}
+
+/* Character Styles */
+.unnamed-character-style-1 {
+font-family: var(--unnamed-font-family-roboto);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-bold);
+font-size: var(--unnamed-font-size-22);
+line-height: var(--unnamed-line-spacing-29);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-ffffff);
+}
+.unnamed-character-style-2 {
+font-family: var(--unnamed-font-family-roboto);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-bold);
+font-size: var(--unnamed-font-size-28);
+line-height: var(--unnamed-line-spacing-37);
+letter-spacing: var(--unnamed-character-spacing-0-73);
+color: var(--unnamed-color-4e5555);
+}
+.unnamed-character-style-3 {
+font-family: var(--unnamed-font-family-roboto);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-bold);
+font-size: var(--unnamed-font-size-18);
+line-height: var(--unnamed-line-spacing-24);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-b7bfc0);
+}
+.unnamed-character-style-4 {
+font-family: var(--unnamed-font-family-roboto);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-18);
+line-height: var(--unnamed-line-spacing-24);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-4c5a5a);
+}
+.unnamed-character-style-5 {
+font-family: var(--unnamed-font-family-roboto);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-bold);
+font-size: var(--unnamed-font-size-18);
+line-height: var(--unnamed-line-spacing-24);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-06d7a5);
+}
+.unnamed-character-style-6 {
+font-family: var(--unnamed-font-family-roboto);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-bold);
+font-size: var(--unnamed-font-size-18);
+line-height: var(--unnamed-line-spacing-24);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-db3766);
+}
+.unnamed-character-style-7 {
+font-family: var(--unnamed-font-family-roboto);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-24);
+line-height: var(--unnamed-line-spacing-32);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-484f55);
+}
+.unnamed-character-style-8 {
+font-family: var(--unnamed-font-family-poppins);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-medium);
+font-size: var(--unnamed-font-size-42);
+line-height: var(--unnamed-line-spacing-63);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-4e5555);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  color: v.$text-color;
+  background: v.$background;
+  font-family: v.$font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

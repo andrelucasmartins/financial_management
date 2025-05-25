@@ -1,0 +1,8 @@
+@use 'styles/_variables' as v;
+
+.page {
+  background: v.$background;
+  color: v.$text-color;
+  font-family: v.$font-family;
+
+}
