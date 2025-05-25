@@ -56,17 +56,17 @@
   5.  DeleteButton: Botão para remover lançamentos
 
   ### Apresentação
-  Desktop
+  ### Desktop
   ![alt text](image.png)
   ![alt text](image-1.png)
 
-  Tablet
+  ### Tablet
   ![alt text](image-2.png)
   ![alt text](image-4.png)
   ![alt text](image-5.png)
   ![alt text](image-6.png)
 
-  Mobile
+  ### Mobile
   ![alt text](image-9.png)
   ![alt text](image-7.png)
   ![alt text](image-8.png)
