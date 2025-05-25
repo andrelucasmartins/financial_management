@@ -1,0 +1,25 @@
+@use 'styles/mixins' as mx;
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  
+
+  @include mx.desktop() {
+    max-width: 74.75rem; // 1196px
+    padding: 0 16px;
+    
+  }
+
+  @include mx.tablet() {
+    padding: 0 16px;
+  }
+  
+  @include mx.mobile() {
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,107 @@
+@use 'styles/variables' as v;
+@use 'styles/mixins' as mx;
+@use 'sass:math';
+
+
+.display {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: 100%;
+
+  align-items: center;
+  gap: 19px;
+  margin-top: -35px;
+  border-radius: v.$border-radius;
+  
+  @include mx.mobile() {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin-top: -15px;
+  }
+
+  @include mx.tablet() {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: -15px;
+  }
+  @include mx.desktop() {
+
+  }
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: v.$color-white;
+  border-radius: v.$border-radius;  
+  box-shadow: var(--unnamed-shadow-1);
+  flex-direction: column;
+
+  padding: 1.6875rem 2.1875rem; // 27px 35px
+
+  @include mx.mobile() {
+     padding: 15px 20px;
+  }
+  :where(.card_green) {
+    background-color: v.$background-green !important;
+    color: v.$color-white !important;
+  }
+
+
+  .card_content {
+    width: 100%;
+    height: 100%;
+    border-radius: v.$border-radius;
+    box-shadow: var(--unnamed-shadow-1);
+  }
+
+  .card_header{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .card_balance {
+    width: 100%;
+    font-size: v.$size-16;
+    font-family: Poppins;
+    font-weight: 700;
+    flex: 1;
+    padding: 35px 0 0 0;
+    line-height: 1.3;
+
+    @include mx.mobile() {
+      font-size: clamp(v.$size-16, 4vw, v.$size-18);
+      line-height: 1.3;
+    }
+
+    @include mx.tablet() {
+      font-size: clamp(v.$size-18, 4vw, v.$size-24);
+      line-height: 1.3;
+    }
+    @include mx.desktop() {
+      font-weight: bold;
+      font-size: clamp(v.$size-24, 1vw + 1.5rem, v.$size-42);
+      line-height: 1.3;
+    }
+
+        
+  }
+
+}
+
+.card_green {
+  background-color: v.$background-green !important;
+  color: v.$color-white !important;
+}
+
+.card_red {
+  background-color: v.$background-red !important;
+  color: v.$color-white !important;
+}

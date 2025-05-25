@@ -1,0 +1,85 @@
+@use "sass:color";
+@use "styles/variables" as v;
+
+.button {
+  width: 245px;
+  width: 100%;
+  height: 53px;
+  background: v.$color-secondary-light;
+  color: v.$color-muted;
+  font-family: v.$font-family;
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-18);
+  line-height: var(--unnamed-line-spacing-24);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  padding: 10px 20px;
+  border-radius: v.$border-radius;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid transparent;
+  
+  &:hover {
+    background: color.scale(v.$color-secondary-light, $lightness: -10%);
+    color: v.$color-white;
+    border: 2px solid v.$color-secondary-light;
+  }
+  &:active {
+    background: v.$color-secondary-light;
+  }
+  &:disabled {
+    background: var(--unnamed-color-b7bfc0);
+    cursor: not-allowed;
+  }
+  &.primary {
+    background: v.$background;
+    color: v.$text-color;
+  }
+  &.secondary {
+    background: v.$color-secondary-light;
+    color: v.$color-white;
+  }
+  &.large {
+    font-size: v.$size-24;
+    padding: 15px 30px;
+  }
+  &.small {
+    font-size: var(--unnamed-font-size-16);
+    padding: 5px 10px;
+  }
+  &.block {
+    display: block;
+    width: 100%;
+  }
+  &.outline {
+    background: transparent;
+    border: 2px solid var(--unnamed-color-4e5555);
+    color: var(--unnamed-color-4e5555);
+    &:hover {
+      background: var(--unnamed-color-4e5555);
+      color: var(--unnamed-color-ffffff);
+    }
+  }
+  &.text {
+    background: transparent;
+    color: var(--unnamed-color-4e5555);
+    &:hover {
+      background: var(--unnamed-color-4e5555);
+      color: var(--unnamed-color-ffffff);
+    }
+  }
+  &.icon {
+    background: transparent;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background: var(--unnamed-color-4e5555);
+      color: var(--unnamed-color-ffffff);
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@use 'styles/variables' as v;
+@use 'styles/mixins' as mx;
+
+.listData {
+  width: 100%;
+  gap: 1rem;
+  margin-top: 43px;
+  overflow: auto;
+
+  @include mx.mobile() {
+    margin-top: 12px;
+    margin: 0;
+  }
+
+  table {
+    width: 100%;
+    border-radius: v.$border-radius;
+    box-shadow: var(--unnamed-shadow-1);
+    display: table;
+    table-layout: auto;
+    border-collapse: separate;
+    border-spacing: 0 1.25rem;   
+
+    .table_head {
+      width: 100%;
+      color: #B9B9B9;
+    }
+
+    .table_body {
+      width: 100%;
+     // Espaço vertical entre linhas
+
+      tr {
+        background-color: v.$color-white;
+        border-radius: v.$border-radius;
+      }
+    
+    }
+
+    .positive {
+      color: v.$color-success;
+      font-weight: bold;
+    }
+        
+    .negative {
+      color: v.$color-danger;
+      font-weight: bold;
+    }
+
+    .truncateCell {
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
+      @media (max-width: 768px) {
+        max-width: 100px;
+      }
+    }
+
+    .delete {
+      fill: v.$color-danger;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+
+      &:hover {
+        fill: v.$color-danger-dark;
+      }
+    }
+
+    td, th {
+      padding: 20px 21px;
+      font-family: v.$font-family;
+
+      @include mx.mobile() {
+        padding: 10px 16px;
+      }
+    }
+
+    th {
+      padding-top: 0;
+      font-size: v.$size-18;
+      font-weight: 700;
+      color: v.$text-muted;      
+      text-align: left;
+
+      &:first-child {
+       padding-left: 0;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    td {
+      text-overflow: ellipsis;
+      white-space: wrap;
+      font-size: v.$size-18;
+      font-weight: 400;
+      color: v.$text-color;
+      margin: 20px 0;
+
+      &:first-child {
+        width: 33%;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+
+      @include mx.mobile() {
+        font-size: v.$size-16;
+      }
+
+      @include mx.tablet() {
+        font-size: v.$size-16;
+      }
+     
+    }
+  }
+}

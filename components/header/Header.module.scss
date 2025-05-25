@@ -1,0 +1,36 @@
+@use 'variables' as v;
+@use 'mixins' as mx;
+
+
+.header {
+  height: 177px;
+  padding-top: 36px;
+  background-color: v.$color-secondary;
+  color: v.$text-color;
+  font-family: v.$font-family;
+  font-size: v.$size-24;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: white;
+
+
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+
+  img {
+    height: 34.46px;
+    width: auto;
+
+    @include mx.mobile() {
+      height: 24px;
+    }
+  }
+}
+
+.button {
+  width: 50%;
+}

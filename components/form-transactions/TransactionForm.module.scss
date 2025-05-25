@@ -1,0 +1,124 @@
+@use "variables" as v;
+@use "mixins" as mx;
+@use "functions" as fn;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.0625rem; // 33px
+
+  .formField {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      height: 4.1875rem; // 67px
+      background-color: #F7F7F7;
+      border-radius: v.$border-radius;
+      border: 1px solid #D9D9D9;
+      font-size: 16px;
+      padding: 12px 16px;
+      color: v.$text-color;
+      font-family: v.$font-family;
+
+      @include mx.mobile() {
+        padding: 10px 16px;
+      }
+
+      @include mx.tablet() {
+        padding: 10px 16px;
+        height: 53px;
+      }
+
+      &:focus {
+        border-color: v.$color-primary;
+        outline: none;
+      }
+
+      &::placeholder {
+        color: fn.lighten-color(#555555, 0.45);
+      }
+    }
+  }
+
+  .button {
+    width: 100% !important;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+  .formField-divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .9375rem;
+
+    input[type="radio"] {
+      display: none;
+
+      &:checked + label {
+        border-color: fn.lighten-color(v.$text-color, 0.45);
+        color: v.$text-color, 0.45;
+        font-weight: 500;
+      }
+    }
+
+    .outline {
+      width: 100%;
+      height: 3.3125rem; // 53px
+      background-color: #fff;
+      border-radius: v.$border-radius;
+      border: 1px solid #D9D9D9;
+      font-size: 16px;
+      padding: 12px 16px;
+      color: v.$text-color;
+      font-family: v.$font-family;
+      cursor: pointer;
+
+      font: normal normal normal 20px/26px Roboto;
+      letter-spacing: 0.52px;
+      color: #4E5555;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px; // 15px
+
+      @include mx.tablet() {
+        padding: 10px 16px;
+        height: 53px;
+      }
+
+      @include mx.desktop() {
+        padding: 10px 16px;
+        height:  4.1875rem; // 67px;
+      }
+
+      &:focus {
+        border-color: v.$color-primary;
+        outline: none;
+      }
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background-color: #D9D9D9;
+      flex-grow: 1;
+    }
+
+    .or {
+      margin: 0 10px;
+      font-size: 16px;
+      color: #555555;
+    }
+  } 
+}
