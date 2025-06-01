@@ -1,3 +1,5 @@
+import { z } from 'zod/v4-mini';
+
 export interface TransactionProps {
   id: number;
   description: string;
@@ -7,3 +9,13 @@ export interface TransactionProps {
   createdAt: string;
   updatedAt: string;
 }
+
+export const transaction = z.object({
+  id: z.number(),
+  description: z.string(),
+  price: z.number(),
+  category: z.string(),
+  status: z.enum(['earnings', 'losses']),
+  createdAt: z.date(),
+  updatedAt: z.date()
+})
