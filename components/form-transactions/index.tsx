@@ -28,7 +28,7 @@ export function TransactionForm() {
   return (
     <form action="" method="post" onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.formField}>
-        <input type="text" placeholder="Nome" name="description" id="name" required/>
+        <input type="text" placeholder="Nome" name="description" id="description" required/>
       </div>
       <div className={styles.formField}>
       <input type="text" placeholder="Preço" name="price" id="price" 
@@ -43,7 +43,7 @@ export function TransactionForm() {
       <div className={styles.formField}>
         <input type="text" placeholder="Categoria" name="category" id="category" required />
       </div>
-      <Button type="submit" className={styles.button}>Cadastrar</Button>
+      <Button type="submit" className={styles.button} id="btnSubmit">Cadastrar</Button>
     </form>
   )
 }

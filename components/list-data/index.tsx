@@ -18,7 +18,7 @@ async function ListData() {
 
     if(list.length === 0) {
       return (
-        <div className={styles.listData}>
+        <div className={styles.listData} id="empty-list">
           <Container>
             Nenhum data foi encontra.
           </Container>
